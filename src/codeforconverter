@@ -1,0 +1,37 @@
+
+//new Vue({
+//  data: {
+//    eurValue: 0
+//  },
+//  methods: {
+//    calculateGbpToEur: function() {
+//      var GBP = document.getElementById("GBP");
+//      var eurValue = document.getElementById("EUR");
+//      eurValue = GBP.value * 1.2;
+//      console.log(eurValue);
+//    }
+//  }
+//});-->
+
+    <p>
+      <label>GBP</label>
+      <input
+        id="GBP"
+        type="number"
+        placeholder="British Pounds"
+        onInput="currencyConverter(this.value)"
+        onChange="currencyConverter(this.value)"
+      />
+    </p>
+    <p>
+      EUR: <span id="outputEuros">{{ something }}</span>
+    </p>
+
+
+
+  methods: {
+    CurrencyConverter(valNum) {
+      document.getElementById("outputEuros").innerHTML =
+        valNum / 0.8333333333333;
+    }
+  }
